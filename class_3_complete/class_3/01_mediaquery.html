@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    /* 최소값 지정 */
+    /* @media all and (min-width:800px){
+      body{
+        background: red;
+      }
+    } */
+    /* 최대값 지정 */
+    /* @media all and (max-width:800px){
+      body{
+        background:blue;
+      }
+    } */
+    /* 최소,최대값 동시 지정 */
+    /* @media all and (min-width:600px) and (max-width:1000px){
+      body{
+        background:green;
+      }
+    } */
+
+    /* pc and wide */
+    .media{
+      width:1000px;
+      height:500px;
+      background:coral;
+      margin:0 auto;
+    }
+
+    /* tablet */
+    @media all and (max-width:1024px){
+      .media{
+        width:768px;
+        background:blue;
+      }
+    }
+
+    /* mobile */
+    @media all and (max-width:768px){
+      .media{
+        width:100%;
+        background: green;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="media">
+
+  </div>
+</body>
+
+</html>
