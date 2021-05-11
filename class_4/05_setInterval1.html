@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>html</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.8.3.min.js"></script>
 		<style>
-			body, h1{margin:0}
 			a{color:#fff}
 
 			.header{
@@ -13,47 +14,40 @@
 				color:#fff;
 				padding:20px;
 			}
-			.section.visual {
-				height: 300px;
-				background: green;
+
+			.visual{
 				text-align: center;
-				color: #eee;
+				margin-top:50px;
 				position: relative;
 			}
-			.section.visual .unit {
-				padding-top: 70px;
-				animation: ani_txt 8s infinite;
+			.visual .unit{
 				opacity: 0;
-				transform: translateY(100px);
 				position: absolute;
-				width: 100%;
+				top:30px;
+				left:0;
+				width:100%;
+				transition:all .5s;
 			}
-			@keyframes ani_txt {
-				0%{opacity: 0;transform: translateY(100px)}
-				12.5%{opacity: 1;transform: translateY(0px)}
-				37.5%{opacity: 1;transform: translateY(0px)}
-				50%{opacity: 0;transform: translateY(100px)}
+			.visual .unit.on{
+				opacity:1;
+				top:0;
 			}
-			.section.visual .unit:nth-child(2) {
-				animation:ani_txt_2 8s infinite;
-			}
-			@keyframes ani_txt_2 {
-				50%{opacity: 0;transform: translateY(100px)}
-				62.5%{opacity: 1;transform: translateY(0px)}
-				87.5%{opacity: 1;transform: translateY(0px)}
-				1000%{opacity: 0;transform: translateY(100px)}
-			}
-			.section.visual .unit .txt_tit {
+			.visual .unit .txt_tit{
 				font-size: 50px;
 			}
-			.section.visual .unit .txt_subs_1 {
-				font-size: 35px;
-				margin: -10px 0 -5px 0;
+			.visual .unit .txt_subs_1{
+				font-size:30px;
 			}
-			.section.visual .unit .txt_subs_2 {
-				font-size: 20px;
-			}
+
+
+			
+
 		</style>
+		<script>
+			$(function(){
+				
+			});
+		</script>
 
   </head>
   <body>
@@ -76,6 +70,11 @@
 						<strong class="txt_tit">두번째 문구</strong>
 						<p class="txt_subs_1">두번째 문구의 애니메이션 예제 입니다.</p>
 						<p class="txt_subs_2">두번째 문구의 애니메이션 예제 입니다.</p>
+					</div>
+					<div class="unit">
+						<strong class="txt_tit">세번째 문구</strong>
+						<p class="txt_subs_1">세번째 문구의 애니메이션 예제 입니다.</p>
+						<p class="txt_subs_2">세번째 문구의 애니메이션 예제 입니다.</p>
 					</div>
 				</div>
 				

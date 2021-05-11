@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>html</title>
+		<style>
+			body, h1{margin:0}
+			a{color:#fff}
+
+			.header{
+				background:#333;
+				color:#fff;
+				padding:20px;
+			}
+			.arrcordion{
+				padding:30px;
+			}
+			.arrcordion > ul{
+				padding:0
+			}
+			.arrcordion > ul > li{
+				list-style:none
+			}
+			.arrcordion > ul > li > a{
+				color:#fff;
+				display: block;
+				background: #000;
+				padding:10px;
+				text-decoration: none;
+				position: relative;
+			}
+			.arrcordion > ul > li > a:after{
+				content:'▽';
+				position: absolute;
+				right:10px;
+				transition: transform 0.5s;
+			}
+			.arrcordion > ul > li .subs{
+				height:0px;
+				overflow: hidden;
+				transition:height 0.5s;
+				background:#bbb;
+			}
+			.arrcordion > ul > li .subs > p{
+				padding:20px;
+				margin: 0;
+			}
+			.arrcordion > ul > li:hover .subs{
+				height:300px;
+			}
+			.arrcordion > ul > li:hover > a:after{
+				transform: rotate(180deg);
+			}
+		</style>
+
+  </head>
+  <body>
+    <div class="header">
+			<h1>logo</h1>
+			<div class="nav">
+				<a href="#">menu1</a>
+				<a href="#">menu2</a>
+				<a href="#">menu3</a>
+			</div>
+    </div>
+		<div class="container">
+				<div class="section arrcordion">
+					<ul>
+						<li>
+							<a href="javascript:" class="btn_toggle">제목1 제목1 제목1 제목1 제목1 제목1 </a>
+							<div class="subs">
+								<p>더 뉴 싼타페는 출시일이 예정보다 늦어져 지난달 30일 사전계약 없이 출시됐다. 먼저 2.2 디젤 모델부터 선보였고, 2.5 가솔린 터보 모델은 몇 달 뒤 출시된다. 더 뉴 싼타페는 요즘 신차 출시 트렌드가 된 ‘완전변경에 가까운 부분변경’을 그대로 이행했다. 자동차 고객의 눈높이가 급격히 높아지면서 부분변경 모델도 큰 변화가 없으면 시장에서 주목받기 어려워졌기 때문이다. 가장 큰 특징은 부분변경인데도 새로운 플랫폼이 적용됐다는 점이다. 전장은 기존 모델보다 15㎜, 전폭은 10㎜, 2열 다리 공간은 34㎜ 길어졌다. 적재 공간은 9ℓ 늘어났다.</p>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:" class="btn_toggle">제목1 제목1 제목1 제목1 제목1 제목1 </a>
+							<div class="subs">
+								<p>더 뉴 싼타페는 출시일이 예정보다 늦어져 지난달 30일 사전계약 없이 출시됐다. 먼저 2.2 디젤 모델부터 선보였고, 2.5 가솔린 터보 모델은 몇 달 뒤 출시된다. 더 뉴 싼타페는 요즘 신차 출시 트렌드가 된 ‘완전변경에 가까운 부분변경’을 그대로 이행했다. 자동차 고객의 눈높이가 급격히 높아지면서 부분변경 모델도 큰 변화가 없으면 시장에서 주목받기 어려워졌기 때문이다. 가장 큰 특징은 부분변경인데도 새로운 플랫폼이 적용됐다는 점이다. 전장은 기존 모델보다 15㎜, 전폭은 10㎜, 2열 다리 공간은 34㎜ 길어졌다. 적재 공간은 9ℓ 늘어났다.</p>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:" class="btn_toggle">제목1 제목1 제목1 제목1 제목1 제목1 </a>
+							<div class="subs">
+								<p>더 뉴 싼타페는 출시일이 예정보다 늦어져 지난달 30일 사전계약 없이 출시됐다. 먼저 2.2 디젤 모델부터 선보였고, 2.5 가솔린 터보 모델은 몇 달 뒤 출시된다. 더 뉴 싼타페는 요즘 신차 출시 트렌드가 된 ‘완전변경에 가까운 부분변경’을 그대로 이행했다. 자동차 고객의 눈높이가 급격히 높아지면서 부분변경 모델도 큰 변화가 없으면 시장에서 주목받기 어려워졌기 때문이다. 가장 큰 특징은 부분변경인데도 새로운 플랫폼이 적용됐다는 점이다. 전장은 기존 모델보다 15㎜, 전폭은 10㎜, 2열 다리 공간은 34㎜ 길어졌다. 적재 공간은 9ℓ 늘어났다.</p>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:" class="btn_toggle">제목1 제목1 제목1 제목1 제목1 제목1 </a>
+							<div class="subs">
+								<p>더 뉴 싼타페는 출시일이 예정보다 늦어져 지난달 30일 사전계약 없이 출시됐다. 먼저 2.2 디젤 모델부터 선보였고, 2.5 가솔린 터보 모델은 몇 달 뒤 출시된다. 더 뉴 싼타페는 요즘 신차 출시 트렌드가 된 ‘완전변경에 가까운 부분변경’을 그대로 이행했다. 자동차 고객의 눈높이가 급격히 높아지면서 부분변경 모델도 큰 변화가 없으면 시장에서 주목받기 어려워졌기 때문이다. 가장 큰 특징은 부분변경인데도 새로운 플랫폼이 적용됐다는 점이다. 전장은 기존 모델보다 15㎜, 전폭은 10㎜, 2열 다리 공간은 34㎜ 길어졌다. 적재 공간은 9ℓ 늘어났다.</p>
+							</div>
+						</li>
+						<li>
+							<a href="javascript:" class="btn_toggle">제목1 제목1 제목1 제목1 제목1 제목1 </a>
+							<div class="subs">
+								<p>더 뉴 싼타페는 출시일이 예정보다 늦어져 지난달 30일 사전계약 없이 출시됐다. 먼저 2.2 디젤 모델부터 선보였고, 2.5 가솔린 터보 모델은 몇 달 뒤 출시된다. 더 뉴 싼타페는 요즘 신차 출시 트렌드가 된 ‘완전변경에 가까운 부분변경’을 그대로 이행했다. 자동차 고객의 눈높이가 급격히 높아지면서 부분변경 모델도 큰 변화가 없으면 시장에서 주목받기 어려워졌기 때문이다. 가장 큰 특징은 부분변경인데도 새로운 플랫폼이 적용됐다는 점이다. 전장은 기존 모델보다 15㎜, 전폭은 10㎜, 2열 다리 공간은 34㎜ 길어졌다. 적재 공간은 9ℓ 늘어났다.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+		</div>
+  </body>
+</html>

@@ -22,8 +22,8 @@
 		}
 
 		.header:after {
+			content: '';
 			display: block;
-			content: "";
 			clear: both;
 		}
 
@@ -35,19 +35,18 @@
 			float: right;
 		}
 
-		.container {
+		.container{
 			display: table;
-			width: 100%;
+			width:100%;
 		}
-		.container .aside {
+		.container .aside{
 			display: table-cell;
-			width: 200px;
+			width:200px;
 			background: red;
 		}
-
-		.container .contents {
+		.container .contents{
 			display: table-cell;
-			background: #aaa;
+			background:#aaa;
 			padding: 30px;
 		}
 
@@ -108,7 +107,7 @@
 		}
 
 		.section.table .cell:nth-child(1) {
-			width: 20%;
+			width: 200px;
 		}
 
 		.section.table .cell:nth-child(2) {
@@ -116,21 +115,21 @@
 			height: 100px;
 		}
 
-		.section.flex {
-			margin: 20px 0 0 0;
+		.section.flex{
+			margin:20px 0 0 0;
 			display: flex;
 		}
-		.section.flex .cell {
-			height: 30px;
+		.section.flex .cell{
+			height:30px;
 		}
-		.section.flex .cell:first-child {
-			width: 200px;
+		.section.flex .cell:first-child{
+			width:200px;
 			background: #8d9926;
 		}
-		.section.flex .cell:last-child {
+		.section.flex .cell:last-child{
 			flex: 1;
 			background: blue;
-			height: 100px;
+			height:100px;
 		}
 	</style>
 
@@ -145,7 +144,7 @@
 			<a href="#">menu3</a>
 		</div>
 	</div>
-	<!--e:header -->
+	<!-- e:header -->
 	<div class="container">
 		<div class="aside"></div>
 		<div class="contents">
@@ -153,25 +152,25 @@
 				<div></div>
 				<div></div>
 			</div>
-			<!--e:section inline -->
+			<!-- e:section inline -->
 			<div class="section float">
 				<div></div>
 				<div></div>
 			</div>
-			<!--e:section float -->
+			<!-- e:section float -->
 			<div class="section table">
 				<div class="cell"></div>
 				<div class="cell"></div>
 			</div>
-			<!--e:section table -->
+			<!-- e:section table -->
 			<div class="section flex">
 				<div class="cell"></div>
 				<div class="cell"></div>
 			</div>
-			<!--e:section flex -->
+			<!-- section flex -->
 		</div>
 	</div>
-	<!--e:container -->
+	<!-- e:container -->
 </body>
 
 </html>

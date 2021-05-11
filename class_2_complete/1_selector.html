@@ -27,57 +27,31 @@
 			text-align: center
 		}
 
-	    .section.box ul li{
-			background: red;
-			}
-		.section.box ul li:first-child{
-			background: blue;
-			}	
-		.section.box ul li:last-child{
-			background: green;
-			}
-		.section.box ul li:nth-child(2){
-			background: gray;
-			}
-
-		/*
-		    .section.box > *{} -- section.box클래스를 갖고있는 바로 아래 자식(직계존속)만 선택
-		    .section.box *{} -- section.box클래스를 갖고 있는 아래 모든 자손을 선택
-		*/
-		.section.box > *{
-			border: 3px solid black;
-			}
+		.section.box ul li{background:red;}
+		.section.box ul li:first-child{background:blue}
+		.section.box ul li:last-child{background:green}
+		.section.box ul li:nth-child(2){background:gray}
+		
+		/* 
+			.section.box > *{}  -- section,box클래스를 갖고있는 바로 아래 자식(직계존속)만 선택
+			.section.box *{} -- section,box클래스를 갖고 있는 아래 모든 자손을 선택
+		 */
+		.section.box > *{border:3px solid black}
 
 		/* 인접형제 선택자 */
-		.section.box ul li + li{margin-top: 10px;}
+		.section.box ul li + li{margin-top:10px}
 
 		/* 가상선택자 */
-		.section.link > div > a{
-			color: red;
-			}
-		.section.link > div > a:before{
-			content:"※"
-			}
-		.section.link > div > a:after{
-			content:""; 
-			display: inline-block; 
-			width: 10px; 
-			height: 10px; 
-			background: blue;
-			}
-		/* 가상선택자(after)를 통한 float clear 처리 */	
-		.section.link:after{
-			content: "";
-			display: block;
-			clear: both;
-			}
-		.section.link > div{
-			float: left;
-			}
+		.section.link > div > a{color: red;}
+		.section.link > div > a:before{content:"※"}
+		.section.link > div > a:after{content:""; display: inline-block; width:10px; height:10px; background:blue}
+
+		/* 가상선택자(after)를 통한 float clear처리  */
+		.section.link:after{content: ""; display: block; clear: both;}
+		.section.link > div{float:left;}
+
 		/* hover(마우스오버) */
-		.section.link > div > a:hover{
-			color: green;
-		}	
+		.section.link > div > a:hover{color:green;}
 	</style>
 
 </head>
