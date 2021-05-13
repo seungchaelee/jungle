@@ -43,13 +43,13 @@
 		}
 	</style>
 	<script>
-		//초기 인턷스변수 설정
+		//초기 인덱스변수 설정
 		var idx = 0;
 		//3초에 한번씩 발생하는 setInterval
 		setInterval(function () {
 			//박스에 on클래스를 모두 삭제
 			$(".section .box").removeClass("on");
-			//인덱스변수값에 해당하는 박스에 on클래스 추가
+			//인덱스변수값에 해당하는 박스에 on클래스를 추가
 			$(".section .box").eq(idx).addClass("on");
 			//인덱스변수는 1증가
 			idx++;

@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
-		<link href="css/fullpage.css" rel="stylesheet" type="text/css" />
-		<link href="css/03_fullpage.css" rel="stylesheet" type="text/css" />
-		<script src="js/jquery-1.8.3.min.js"></script>
-		<script src="js/fullpage.js"></script>
-		
-		<script>
-			$(function(){
-			
-			})
-		</script>
-		<style>
-			
-		</style>
 
-  </head>
-  <body>
-    
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/fullpage.css" rel="stylesheet" type="text/css" />
+	<link href="css/03_fullpage.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/fullpage.js"></script>
+
+	<script>
+		$(function () {
+			$(".fp").fullpage({
+				navigation:true, //네비게이션 유무
+				navigationPosition:"right", //네비게이션의 위치
+				sectionsColor:["#999", "#4bbfc3", "#7baabe", "#666"], //각 섹션별 배경색
+				navigationTooltips:["main", "intro", "map", "contact"], //네비게이션 ???
+				showActiveTooltip:true //네비게이션 메뉴명 활성와
+			});
+		})
+	</script>
+	<style>
+		.fp .fp-tableCell {
+			font-size: 100px;
+			text-align: center;
+			font-weight: bold;
+			color: #fff;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="fp">
+		<div class="section">
+			내용1
+		</div>
+		<div class="section">
+			내용2
+		</div>
+		<div class="section">
+			내용3
+		</div>
+		<div class="section">
+			내용4
+		</div>
+	</div>
+</body>
+
 </html>

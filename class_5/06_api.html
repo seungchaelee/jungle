@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="css/reset.css" rel="stylesheet" type="text/css" />
-		<link href="css/06_api.css" rel="stylesheet" type="text/css" />
-		<script src="js/jquery-1.8.3.min.js"></script>
-		
-		<script>
-			
-			$(function(){
-				
-			})
-		</script>
 
-  </head>
-  <body>
-		<div class="wrap">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/06_api.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c103a408caaaee44c19f32d0231d3e3a"></script>
+	<script>
 
-			<div class="header">
+		$(function () {
+			var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+			var options = { //지도를 생성할 때 필요한 기본 옵션
+				center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+				level: 3 //지도의 레벨(확대, 축소 정도)
+			};
+
+			var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+		})
+	</script>
+
+</head>
+
+<body>
+	<div class="wrap">
+
+		<div class="header">
 			<h1>logo</h1>
 			<div class="nav">
 				<a href="#">menu1</a>
 				<a href="#">menu2</a>
 				<a href="#">menu3</a>
 			</div>
-    </div>
+		</div>
 		<div class="container">
-				
-    </div>
+			<div id="map" style="width:500px;height:400px;"></div>
+		</div>
 		<div class="footer">
 			footer
 		</div>
-    
 
-		
-  </body>
+
+
+</body>
+
 </html>

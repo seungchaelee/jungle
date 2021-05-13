@@ -1,0 +1,115 @@
+.box_intro{
+	padding:30px 0;
+	text-align: center;
+}
+.box_intro .btn_setting{
+	border:none;
+	background:#595238;
+	color:#fff;
+	height:100px;
+	width:200px;
+	font-size:20px;
+	cursor: pointer;
+}
+
+.section.reservation{
+	width:590px;
+	margin:0 auto;
+	background:#E3DFC8;
+}
+.section.reservation > ol{
+	padding:20px;
+}
+.section.reservation > ol:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.section.reservation .unit{
+	float:left;
+	padding:5px;
+	box-sizing:border-box;
+}
+.section.reservation .unit button{
+	display: block;
+	height:100px;
+	width:100px;
+	line-height: 100px;
+	text-align: center;
+	background:#91c170;
+	color: #fff;
+	border:none;
+	cursor:pointer;
+}
+.section.reservation .unit button:hover{
+	background:#78ab55;
+}
+.section.reservation .unit button[disabled],
+.section.reservation .unit button[disabled]:hover
+{
+  background:#BABABA url(../img/img_disabled.png) no-repeat;
+  background-size:100% 100%;
+  text-indent: -9999px;
+  cursor:default;
+}
+.section.reservation .unit button.select{
+	background: #FF5F40;
+  color:#fff;
+  font-size:20px;
+}
+.section.reservation .unit button.select:hover
+{
+  background: #de472a;
+}
+
+.section.reservation .box_info{
+	padding:15px;
+	background: #000;
+}
+.section.reservation .box_info:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.section.reservation .box_info .info{
+	float:left;
+}
+.section.reservation .box_info .info > p{
+	color: #999;
+	font-size: 15px;
+	padding:2px 0;
+}
+.section.reservation .box_info .info > p > strong{
+	font-size: 17px;
+	color: #fff;
+}
+.section.reservation .box_info .box_btn{
+	float:right;
+}
+.section.reservation .box_info .box_btn .btn_submit{
+	width:100px;
+	height:45px;
+	border: 0;
+	background: #E8C64C;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+.section.complete{
+	background: #fff;
+	border:1px solid #bbb;
+	padding:100px 0;
+	text-align: center;
+	width:700px;
+	margin:0 auto;
+}
+
+.section.complete .txt_number{
+	font-size: 30px;
+	font-weight: bold;
+	margin:20px 0;
+}
+
+.section.complete .txt_price{
+	font-size:20px;
+}

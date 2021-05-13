@@ -49,11 +49,11 @@
 	<script>
 		$(function () {
 			var idx = 0;
-			setInterval(function () {
+			setInterval(function(){
 				$(".section .unit").removeClass("on");
 				$(".section .unit").eq(idx).addClass("on");
 				idx++;
-				if (idx == 4) {
+				if(idx == 4){
 					idx = 0;
 				}
 			}, 3000);
