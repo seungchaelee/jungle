@@ -1,0 +1,28 @@
+.box_counter{
+	text-align:center;
+	height:100vh;
+	background:url(../images/bg.jpg) no-repeat;
+	background-size:cover;
+}
+.box_counter .txt_Number{
+	padding:300px 0 50px;
+	font-size:70px;
+	font-weight:bold;
+	color:#fff;
+}
+.box_btn > a{
+	display:inline-block;
+	width:100px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	background:#fff;
+	font-size:20px;
+	border-radius:5px;
+	opacity:.8;
+	margin:0 5px;
+	font-weight:bold;
+}
+.box_btn > a:hover{
+	opacity:1;
+}

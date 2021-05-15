@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/01_counter.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.8.3.min.js"></script>
+
+	<script>
+		$(function () {
+			var current = 0;//현재 카운트를 저장하는 변수
+			var saveInt;//setInterval을 저장하는 변수
+
+			//시작버튼 click
+			$(".btn_start").click(function(){
+				clearInterval(saveInt);//setInterval 삭제(clear) & 반복실행 중단
+				saveInt = setInterval(function(){
+					current++;//카운트를 증가시킴
+					$(".txt_Number").text(current);//카운트 변수를 해당 태그에 업데이트
+				},1000);
+			});
+			//스톱버튼 click
+			$(".btn_stop").click(function(){
+				clearInterval(saveInt);
+			});
+			//리셋버튼 click
+			$(".btn_reset").click(function(){
+				clearInterval(saveInt);
+				current = 0;//카운트 초기화
+				$(".txt_Number").text(current);//카운트 변수를 해당 태그에 업데이트
+			});
+		})
+	</script>
+
+</head>
+
+<body>
+	<div class="box_counter">
+		<div class="txt_Number">0</div>
+		<div class="box_btn">
+			<a href="javascript:;" class="btn_start">시작</a>
+			<a href="javascript:;" class="btn_stop">스톱</a>
+			<a href="javascript:;" class="btn_reset">리셋</a>
+		</div>
+
+	</div>
+</body>
+
+</html>

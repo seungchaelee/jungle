@@ -40,6 +40,7 @@
 			$(window).scroll(function(){
 				//문서상 보이는 위치에 대한 정보를 저장
 				var val = $(window).scrollTop();
+				
 				if(val == 0){//최상단일경우 버튼 숨김
 					$(".btn_top").hide(300);
 				}else{//최상단이 아닐경우 버튼 보임
@@ -53,7 +54,7 @@
 				//$("html").scrollTop(0);
 				
 				//문서 제일 위로 이동하는 애니메이션 처리(1초)
-				$("hmtl").animate({
+				$("html").animate({
 					"scrollTop": 0 
 				},1000)
 			});

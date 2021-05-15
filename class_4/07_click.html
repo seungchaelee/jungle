@@ -20,20 +20,12 @@
 			color: #fff
 		}
 
-		.header .nav.on {
+		.header .nav {
 			float: right;
 			margin-top: 10px;
 		}
 		
-		.header .btn_close {
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 50px;
-			height: 50px;
-			z-index: 2;
-		}
-		.header .nav.on a {
+		.header .nav a {
 			color: #fff;
 			margin-left: 10px
 		}
@@ -43,11 +35,11 @@
 			display: block;
 			clear: both;
 		}
-		.header .nav a {
-			display: none;
-		}
 
 		/* 클리어 처리 */
+		.header .btn_close {
+			display: none;
+		}
 
 		@media all and (max-width:768px) {
 			.header .nav {
@@ -61,13 +53,22 @@
 				margin-top: 0;
 			}
 
-			.header .nav:hover {
+			.header .nav.on {
 				width: 200px;
 				height: 100vh;
 				z-index: 2;
 			}
 
-			.header .nav:hover a {
+			.header .btn_close {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 50px;
+				height: 50px;
+				z-index: 2;
+			}
+
+			.header .nav.on a {
 				display: block;
 				font-size: 20px;
 				line-height: 50px;
@@ -97,7 +98,7 @@
 			});
 
 			//메뉴 닫기
-			$("header .btn_close").click(function(){
+			$(".header .btn_close").click(function(){
 				$(".header .nav").removeClass("on");
 				$(".header .btn_close").hide();
 			});

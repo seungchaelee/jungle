@@ -1,0 +1,27 @@
+.wrap{
+	width:1000px;
+	margin:0 auto;
+}
+.header{
+	background:#333;
+	color:#fff;
+	padding:20px;
+}
+.container{
+	background:#eee;
+	min-height:300px;
+	padding-bottom:50px;
+}
+.container .section + .section{
+	margin-top:50px;
+}
+
+.footer{
+	height:50px;
+	background:#777;
+}
+
+
+.list{
+	padding:5px;
+}
