@@ -1,7 +1,7 @@
 <script>
-            for(var i=2; i<=9; i++){
-                for(var j=2; j<=9; j++) {
-                    document.write(i + " X " + j + " = " + i*j + "<br><br>");
-                }
-            };
-    </script>
+    for (var a = 2; a <= 9; a++) {
+        for (var b = 2; b <= 9; b++) {
+            document.write(a + " X " + b + " = " + a * b + "<br><br>");
+        }
+    };
+</script>
