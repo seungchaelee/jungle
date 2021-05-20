@@ -1,0 +1,129 @@
+/* 공통 */
+.wrap{
+    border:1px solid #999;
+    width:300px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #333;
+    margin: 10px 0 0 10px;
+}
+
+/* 채팅창 영역 */
+.chat_area{
+    height:350px;
+    background-color: #acc2d2;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius:5px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.chat_area .item{}
+.chat_area .item + .item{
+    margin-top:15px;
+}
+.chat_area .item .box{
+    display: inline-block;
+    max-width:180px;
+    position: relative;
+}
+.chat_area .item .box:before{
+    content: "";
+    display: block;
+    width:0;
+    height:0;
+    border-top: 0px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #fff;
+    position: absolute;
+    left:-8px;
+    top:9px;
+}
+.chat_area .item .box .msg{
+    background:#fff;
+    padding:8px;
+    border-radius: 10px;
+}
+.chat_area .item .box .time{
+    position: absolute;
+    display: block;
+    width:70px;
+    right: -75px;
+    bottom:3px;
+    color: #999;
+    font-size: 11px;
+}
+
+.chat_area .item.mymsg{
+    text-align: right;
+}
+.chat_area .item.mymsg .box:before{
+    border-right: 0;
+    border-left:8px solid #fee600;
+    left:auto;
+    right:-8px;
+    
+}
+.chat_area .item.mymsg .box .msg{
+    background-color: #fee600;
+}
+.chat_area .item.mymsg .box .time{
+    right:auto;
+    left:-75px;
+}
+/* 애니메이션 처리 */
+.chat_area .item{
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateX(30px);
+}
+.chat_area .item.mymsg{
+    transform: translateX(-30px);
+}
+.chat_area .item.on{
+    opacity:1;
+    transform: translateX(0);
+}
+
+
+/* 입력창 영역 */
+.input_area{
+    margin-top:5px;
+}
+.input_area input[type="text"]{
+    width:100%;
+    box-sizing: border-box;
+    border: 0;
+    background-color: #ddd;
+    height: 30px;
+    border-radius:5px;
+    padding-left:10px;
+}
+.input_area input[type="text"] + input[type="text"]{
+    margin-top:5px;
+}
+.input_area input[type="text"]::placeholder{
+    color:#999;
+}
+
+/* 모바일 영역 */
+@media all and (max-width:768px){
+    html, body{
+        height:100%;
+    }
+    .wrap{
+        width:auto;
+        margin:0;
+        height:100%;
+        border:0;
+        font-size:15px;
+    }
+    .chat_area{
+        height:calc(100% - 110px);
+    }
+    .input_area input[type="text"]{
+        height:50px;
+        font-size:15px;
+    }
+}

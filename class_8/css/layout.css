@@ -1,0 +1,43 @@
+.wrap{}
+
+/* common */
+.inner{}
+
+/* header */
+.header{}
+.header:after{}
+.header h1 a{}
+.header .gnb .img-logo-m{}
+.header .gnb .navi{}
+.header .gnb .navi > li{}
+.header .gnb .navi > li > a{}
+.header .gnb .navi > li > a:hover{}
+.header .gnb .btn-gnb-close{}
+.header .btn-gnb-ham{}
+
+/* container */
+.container{}
+
+/* footer */
+.footer{}
+.footer .info{}
+.footer .info > span{}
+
+
+@media all and (max-width:1024px){
+    .header .gnb{}
+    .header .gnb.on{}
+    .header .gnb .img-logo-m{}
+    .header .gnb .navi{}
+    .header .gnb .navi > li{}
+    .header .gnb .navi > li > a{}
+    .header .gnb .btn-gnb-close{}
+    .header .btn-gnb-ham{}
+}
+
+@media all and (max-width:1200px){
+    .wrap{}
+    
+    /* common */
+    .inner{}
+}

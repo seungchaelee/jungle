@@ -1,0 +1,90 @@
+.container{}
+
+/* 비주얼 */
+.section.visual{}
+.section.visual .slider{}
+.section.visual .slider .unit{}
+.section.visual .slider .unit img{}
+.section.visual .slider .unit img.m{}
+.section.visual .slider .inner{}
+.section.visual .slider .inner .box-msg{}
+.section.visual .slider .unit-02 .inner .box-msg{}
+.section.visual .slider .unit-03 .inner .box-msg{}
+.section.visual .slider .unit-04 .inner .box-msg{}
+.section.visual .slider .inner .box-msg-inner{}
+.section.visual .slider .inner .box-msg-inner .cont{}
+.section.visual .slider .inner .box-msg-inner .cont:before{}
+.section.visual .slider .inner .box-msg-inner .cont:after{}
+.section.visual .slider .box-msg-2{}
+.section.visual .slider .unit-02 .box-msg-2{}
+.section.visual .slider .unit-03 .box-msg-2{}
+.section.visual .slider .unit-04 .box-msg-2{}
+.section.visual .slider .box-msg-2 > p{}
+.section.visual .slider .box-msg-2 > p:nth-child(2){}
+.section.visual .slider .box-msg-2 > p:nth-child(3){{
+
+/* bx슬라이드 버튼 */
+.section.visual .bx-controls a{}
+.section.visual .bx-controls .bx-prev{}
+.section.visual .bx-controls .bx-next{}
+
+/* section.banner - 메인 컨텐츠 */
+.section.banner{}
+.section.banner .inner{}
+.section.banner .inner > ul{}
+.section.banner .inner > ul > li{}
+.section.banner .inner > ul > li.unit_1{}
+.section.banner .inner > ul > li.unit_2{}
+.section.banner .inner > ul > li.unit_3{}
+.section.banner .inner > ul > li.unit_2 > p,
+.section.banner .inner > ul > li.unit_3 > p{}
+.section.banner .inner > ul > li > h2{}
+.section.banner .inner > ul > li > h2 .txt_green{}
+.section.banner .inner > ul > li > p{}
+.section.banner .inner > ul > li .btn_detail{}
+.section.banner .inner > ul > li .btn_detail:after{}
+
+/* pc버전 가로스크롤을 없애기 위한 처리 */
+@media all and (max-width:1200px){
+    .section.visual{}
+}
+
+/* 모바일 전환 */
+@media all and (max-width:1024px){
+    .section.visual .slider .unit{}
+    .section.visual .slider .unit img{}
+    .section.visual .bx-viewport{}
+	.section.visual .slider .inner .box-msg{}
+	.section.visual .slider .inner .box-msg-inner{}
+	.section.visual .slider .inner .box-msg-inner .cont{}
+	.section.visual .slider .inner .box-msg-inner .cont > br{}
+	.section.visual .slider .inner .box-msg-inner .cont:before{}
+	.section.visual .slider .inner .box-msg-inner .cont:after{}
+	.section.visual .slider .box-msg-2{}
+	.section.visual .slider .box-msg-2 > p{}
+	.section.visual .slider .box-msg-2 > p:nth-child(2){}
+	.section.visual .slider .box-msg-2 > p:nth-child(3){}
+	.section.visual .slider .unit-02 .box-msg-2{}
+	.section.visual .slider .unit-03 .box-msg-2{}
+	.section.visual .slider .unit-04 .box-msg-2{}
+    .section.banner .inner > ul > li{}
+    .section.banner .inner > ul > li.unit_2,
+    .section.banner .inner > ul > li.unit_3{}
+    .section.banner .inner{}
+    .section.banner .inner > ul > li + li{}
+    .section.banner .inner > ul > li.unit_2 > p,
+    .section.banner .inner > ul > li.unit_3 > p{}
+}
+
+/* 모바일 작은 사이즈 전환 */
+@media all and (max-width:640px){
+	.section.visual .slider .unit img.pc{}
+	.section.visual .slider .unit img.m{}
+	.section.visual .bx-controls{}
+	.section.visual .slider .box-msg-2 > p{}
+	.section.visual .slider .box-msg-2 > p:nth-child(2){}
+	.section.visual .slider .box-msg-2 > p:nth-child(3){}
+	.section.banner .inner > ul > li{}
+	.section.banner .inner > ul > li > h2{}
+	.section.banner .inner > ul > li > h2 > br{}
+}
