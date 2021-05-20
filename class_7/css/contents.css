@@ -44,6 +44,7 @@
     background: #fff;
     padding: 8px;
     border-radius: 10px;
+    word-wrap: break-word;
 }
 .chat_area .item .box .time {
     position: absolute;
