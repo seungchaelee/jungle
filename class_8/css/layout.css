@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+@import url('//fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+/* font-family: 'Nanum Myeongjo', serif; */
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 공통 */
+.wrap {}
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* 접근성을 위한 텍스트 숨김처리 */
+.txt-hide{
+    width: 1px;
+    height: 1px;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    text-indent: -9999px;
+}
+
+/* header */
+.header {
+    text-align: center;
+    background: url(../img/header_bg.jpg);
+}
+.header::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: url(../img/bg_header_line.jpg) 0 center;
+}
+.header h1 {
+    padding-top: 26px;
+}
+.header h1 > a {}
+.header h1 > a .img-logo {}
+/* header > gnb */
+.haeder .gnb {}
+.header .gnb .img-logo-m {
+    display: none;
+}
+.header .gnb .navi {}
+.header .gnb .navi > li {
+    display: inline-block;
+}
+.header .gnb .navi > li > a {
+    width: 166px;
+    display: inline-block;
+    height: 78px;
+    line-height: 78px;
+    font-size: 19px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+.header .gnb .navi > li > a:hover {
+    font-weight: bold;
+}
+.header .gnb .btn-gnb-close {
+    display: none;
+}
+/* header > btn-open */
+.header .btn-gnb-open {
+    display: none;
+}
+
+/* container */
+.container {
+    min-height: 800px;
+}
+
+/* footer */
+.footer {
+    background: #333;
+    text-align: center;
+    padding: 42px 0 31px;
+}
+.footer .info {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 23px;
+    line-height: 24px;
+}
+.footer .info > span {
+    margin: 0 16px;
+}
+.footer .btn-goTop {
+    width: 40px;
+    height: 42px;
+    background: #007636 url(../img/icon_top.png) no-repeat center;
+    border: 0;
+    position: fixed;
+    bottom: 0;
+    right: 15%;
+}
+
+/* 모바일 영역*/
+@media all and (max-width:1024px){
+    .header {
+        height: 85px;
+    }
+    .header h1 {
+        padding-top: 14px;
+    }
+    .header h1 > a .img-logo {
+        width: 185px; 
+    }
+    .header::after {
+        margin-top: 15px;
+    }
+    .header .gnb {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 400px;
+        background: #fff;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        transform: translateX(-450px);
+        transition: transform .3s;
+    }
+    .header .gnb.on {
+        transform: translateX(0);
+    }
+    .header .gnb .img-logo-m {
+        display: block;
+        width: 200px;
+    }
+    .header .gnb .navi {
+        margin-top: 45px;
+    }
+    .header .gnb .navi > li {
+        display: block;
+        text-align: left;
+    }
+    .header .gnb .navi > li > a {
+        display: block;
+        width: auto;
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 1px solid #ebeeef;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .header .gnb .btn-gnb-close {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 0;
+        background: #fff url(../img/ico_nav_close.png) no-repeat center;
+        position: absolute;
+        top: 0;
+        left: 400px;
+    }
+
+    .header .btn-gnb-open {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 85px;
+        height: 85px;
+        border: 0;
+        background: url(../img/ico_nav_ham.png) no-repeat center;
+    }
+}
