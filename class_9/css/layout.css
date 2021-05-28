@@ -1,0 +1,114 @@
+/* 공통 */
+html {
+    font-family: 'NanumSquare', sans-serif !important; 
+}
+body {
+    background-color: #74cafc;
+}
+.inner {
+    width: 960px;
+    margin: 0 auto;
+}
+.wrap {}
+
+/* header */
+.header {}
+.header .top-img {}
+
+/* container */
+.container {}
+.container .inner {
+    background-color: #fff;
+    box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -webkit-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -moz-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -ms-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -o-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    padding-bottom: 120px;
+}
+.container .banner {
+    box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -webkit-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -moz-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -ms-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -o-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+}
+.container .step-list {
+    text-align-last: center;
+    margin: 60px 0 34px;
+}
+.container .step-list .step-unit {
+    display: inline-block;
+    width: 209px;
+    height: 209px;
+    background: url(../img/img_circle_01.png) no-repeat;
+    vertical-align: middle;
+    padding-top: 81px;
+    box-sizing: border-box;
+    position: relative;
+}
+.container .step-list .step-unit + .step-unit {
+    margin-left: 75px;
+}
+.container .step-list .step-unit + .step-unit:before {
+    content: '';
+    display: inline-block;
+    width: 31px;
+    height: 40px;
+    background: url(../img/img_arr.png) no-repeat;
+    position: absolute;
+    left: -52px;
+}
+.container .step-list .step-unit .tit {
+    font-size: 27px;
+}
+.container .step-list .step-unit .subs {
+    font-size: 16px;
+    color: #3f3f3f;
+    margin-top: 8px;
+    line-height: 21px;
+    transform: skew(-0.05deg); /* window 나눔 스퀘어 폰트만 가능 */
+}
+.container .txt-help {
+    transform: skew(-0.05deg);
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* fotter */
+.fotter {
+    text-align: center;
+    position: relative;
+    height: 95px;
+    padding-bottom: 80px;
+}
+.fotter::before{
+    content: '';
+    display: block;
+    height: 45px;
+    background-color: #009cff;
+}
+.fotter .btn-summit{
+    display: inline-block;
+    width: 302px;
+    height: 142px;
+    background-color: #ff577f;
+    border: 12px solid #fff;
+    box-sizing: border-box;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 118px;
+    box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -webkit-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -moz-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -ms-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    -o-box-shadow: 23px 23px 13px rgba(39, 166, 240, 0.25);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -45px;
+}
