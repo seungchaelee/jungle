@@ -136,14 +136,14 @@ body {
 }
 @keyframes ani-bg3 {
     0% {background-position: 0 0;}   /* x, y */
-    100% {background-position: 783px 0;} /* 사이즈 맞추기 */
+    100% {background-position: 870px 0;} /* 사이즈 맞추기 */
 }
 #section1 .bg-wrap.on-3 .bg.reverse {
     animation-name: ani-bg1-r ;
 }
 @keyframes ani-bg3-r {
     0% {background-position: 0 0;}   
-    100% {background-position: -783px 0;} /* 사이즈 맞추기 */
+    100% {background-position: -870px 0;} /* 사이즈 맞추기 */
 }
 
 #section1 .link-wrap {
