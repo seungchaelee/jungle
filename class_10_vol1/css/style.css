@@ -1,0 +1,82 @@
+/* 공통 */
+#fp-nav{}
+#fp-nav > ul{}
+#fp-nav > ul > li{
+    text-align: right;
+}
+#fp-nav > ul > li + li{
+    margin-top:1px;
+}
+#fp-nav > ul > li > a{
+    display: block;
+}
+#fp-nav > ul > li > a > span{
+    display: inline-block;
+    background-color: #09131b;
+    color: #fff;
+    padding: 5px 10px 5px 20px;
+    font-size: 13px;
+    transform: translateX(calc(100% - 20px));
+    transition: transform 0.5s;
+}
+#fp-nav > ul > li.active{}
+#fp-nav > ul > li.active > a > span{
+    transform:translateX(0);
+}
+
+body{
+    background-color: #d5dee5;
+    font-family: "Roboto", sans-serif;
+}
+
+/* main */
+#section0{
+    text-align: center;
+}
+#section0 .bg-wrap{}
+#section0 .bg-wrap .bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../img/img_main_01.jpg) no-repeat center center;
+    background-size:cover;
+    opacity: 0;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+#section0 .bg-wrap .bg.on{
+    opacity: 1;
+    transform: scale(1.2);
+}
+#section0 .bg-wrap .bg.bg-2{
+    background-image: url(../img/img_main_02.jpg);
+}
+#section0 .bg-wrap .bg.bg-3{
+    background-image: url(../img/img_main_03.jpg);
+}
+#section0 .link-wrap{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+#section0 .link-wrap .link-unit{}
+#section0 .link-wrap .link-unit .btn{
+    color: #fff;
+    font-size: 130px;
+    font-weight: bold;
+    opacity: 0.4;
+    height:130px;
+    line-height: 130px;
+    overflow: hidden;
+    display: block;
+}
+#section0 .link-wrap .link-unit .btn:hover{
+    opacity: 1;
+}
+
+#section0 .ico{}
+#section0 .ico.ico-1{}
+#section0 .ico.ico-2{}
