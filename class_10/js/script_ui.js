@@ -69,9 +69,43 @@ function init(){
     }
 
     ////portfolio
-    $("#section3 .photo-wrap > ul").slick();
+    $("#section3 .photo-wrap > ul").slick({ //slick jquery 플러그인
+        arrows:false, //좌우버튼 비활성화
+        slidesToshow:3, //한화면에 보여지는 이미지 갯수
+        variableWidth:true, //이미지 크기 만금 보여주는(겸침현상 X)
+        centerMode:true, //기본 왼쪽 정룔이지만 가운데 정렬로 변경 사켜줌
+    }).on("afterChange", function(event, slick, current){ //슬라이드가 한번 이동시 발생되는 이벤트(current인자: 순번(index))
+        console.log(current);
+        $("#section3 .txt-wrap > ul > li").removeClass("on"); //li전체의 on클래스 삭제
+        $("#section3 .txt-wrap > ul > li").eq(current).addClass("on"); //해당 index에 on클래스 추가
+    });
 
+    //portfolio cursor 효과 
+    document.addEventListener("mousemove",function(event){
+        var mx = event.pageX - 15; //마우스 X좌표 값
+        var my = event.pageY - 15; //마우스 Y좌표 값
+        $("#section3 .photo-wrap .cursor").css({"top":my, "left":mx});
+    });
 
+    //// contact
+    $("#section4 .input-wrap input[type=text]").on("textInput", function(event){ //input의 키프레스 이벤트
+        var _t = event.originalEvent.data; //키프레스 시 타이핑한 값(한글까지 체크함)
+        //rgb(색상코드)에 쓰일 랜덤값(3개) 구함
+        var _r = Math.floor(Math.random()*256); //Math.rnadom: 랜덤값, Math.floor: 소수점 버림, Math.
+        var _g = Math.floor(Math.random()*256);
+        var _b = Math.floor(Math.random()*256);
+        //애니메이션 타입을 랜덤으로 정할 값 구함 (0~2)
+        var _rn = Math.floor(Math.random()*3);
 
+        // append : 추가될 대상 .append(추가객체)
+        // appendTo : 추가객체 .appendTo(추가될대상).추가이벤트1.추가이벤트2 ... ....
+        // $("#section4 .txt-wrap .area").append("<span class='ani-"+_rn+"' style='color:rgb("+_r+",  "+_g+", "+_b+")'>"+_t+"</span>");
+        $("<span class='ani-"+_rn+"' style='color:rgb("+_r+",  "+_g+", "+_b+")'>"+_t+"</span>")
+        .appendTo($("#section4 .txt-wrap .area"))
+        .on("animationend",function(){ //css에서 만든 에니매이션이 끝나는 시점에 이벤트 발생
+            $(this).remove(); //자신을 삭제
+        })
+            
+    })
     
 }
