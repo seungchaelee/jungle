@@ -41,7 +41,7 @@ function init(){
     });
 
     ////skill
-    var _pos = [100, 45, 70, 25]; //좌표값
+    var _pos = [70, 50, 30, 15]; //좌표값
     var setId; //setInterval을 담는 변수
     $("#section2 .link-wrap .link-unit .btn").mouseover(function(){
         var _index = $(this).parent().index();
