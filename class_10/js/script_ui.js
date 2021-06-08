@@ -11,7 +11,11 @@ function init(){
         navigationTooltips:["MAIN", "PROFILE", "SKILL", "PORTFOLIO", "CONTACT"], //메뉴명
         scrollingSpeed:1500, //메뉴이동 스크롤 스피드
         anchors:["main", "profile", "skill", "portfolio", "contact"], //주소생성 및 메뉴 바로가기
-    });
+        afterLoad:function(name, index){ //해당화면에 도착시 발생하는 이벤트(index)
+            // $(".section").removeClass("on")
+            $(".section").eq(index-1).addClass("on")
+        }
+    })
 
     //// 메인
     // 배경처리(페럴럭스 플러그인)
@@ -82,8 +86,8 @@ function init(){
 
     //portfolio cursor 효과 
     document.addEventListener("mousemove",function(event){
-        var mx = event.pageX - 15; //마우스 X좌표 값
-        var my = event.pageY - 15; //마우스 Y좌표 값
+        var mx = event.pageX -15 ; //마우스 X좌표 값
+        var my = event.pageY -225 ; //마우스 Y좌표 값
         $("#section3 .photo-wrap .cursor").css({"top":my, "left":mx});
     });
 

@@ -36,10 +36,12 @@ body {
 #section0 .bg-wrap {}
 #section0 .bg-wrap .bg {
     position: absolute;
-    top: 0;
+    top: 10%;
     bottom: 0;
-    left: 0;
+    left: 10%;
     right: 0;
+    height: 80%;
+    width: 80%;
     background: url(../img/img_main_01.jpg) no-repeat center center;
     background-size: cover;
     opacity: 0;
@@ -77,7 +79,17 @@ body {
     opacity: 1;
 }
 
-#section0 .ico.ico {}
+#section0 .ico.ico {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: url(../img/ico_01.png) no-repeat center center;
+    background-size: auto 100%;
+    position: absolute;
+    left: 50%;
+    z-index: 10;
+    
+}
 #section0 .ico.ico-1 {}
 #section0 .ico.ico-2 {}
 
@@ -418,4 +430,30 @@ body {
     top: -20px;
     color: #fff;
     font-size: 14px;
+}
+
+/* section 별 인트로 효과 */
+.section .intro-obj {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s;
+}
+
+.section.on .intro-obj {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 딜레이 설정 */
+.section .intro-obj.delay-1 {
+    transition-delay: 0.3s !important; 
+}
+.section .intro-obj.delay-2 {
+    transition-delay: 0.6s !important; 
+}
+.section .intro-obj.delay-3 {
+    transition-delay: 0.9s !important;
+}
+.section .intro-obj.delay-4 {
+    transition-delay: 1.2s !important;
 }
