@@ -1,5 +1,17 @@
 $(function(){
-    init(); //초기함수 호출(임시)
+    // init(); //초기함수 호출(임시)
+    var _tc = $(".hidden-wrap > img").length; //이미지 총 갯수
+    $(".hidden-wrap > img").imagesLoaded()
+    .done(function(){ //모든 이미지 로드가 완료되는 시점에 발생하는 이벤트
+        $(".preload-wrap").addClass("complete");
+    })
+    .progress(function(index){ //이미지 각각의 로드가 완료되는 시점에 한번씩 발생하는 이벤트
+        var _pc = index.progressedCount;
+        var _per = Math.floor(_pc / _tc * 100);
+        // console.log(_per);
+        $(".preload-wrap .count").text(_per);
+        $(".preload-wrap .count").css("width", _per + "%")
+    });
 });
 
 //초기함수
@@ -14,6 +26,13 @@ function init(){
         afterLoad:function(name, index){ //해당화면에 도착시 발생하는 이벤트(index)
             // $(".section").removeClass("on")
             $(".section").eq(index-1).addClass("on")
+        },
+        onLeave:function(old, index, direction){ //해당 화면을 떠날때 발생하는 이벤트(index = 도착하는 화면의 순서)
+            if(index == 1){
+                $("#section0 .ico").css("transform", "translateY(0)");
+            }else{
+                $("#section0 .ico").css("transform", "translateY(-330px)");
+            }
         }
     })
 
@@ -86,8 +105,9 @@ function init(){
 
     //portfolio cursor 효과 
     document.addEventListener("mousemove",function(event){
+        var pw = $(".photo-wrap").position().top; //커서의 부모인 photo-wrap의 상단 공간값 구함(공간값이 커서와 마우스 포인터의 차이를 없앰)
         var mx = event.pageX -15 ; //마우스 X좌표 값
-        var my = event.pageY -225 ; //마우스 Y좌표 값
+        var my = event.pageY -15 - pw ; //마우스 Y좌표 값
         $("#section3 .photo-wrap .cursor").css({"top":my, "left":mx});
     });
 
