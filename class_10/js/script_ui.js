@@ -3,7 +3,13 @@ $(function(){
     var _tc = $(".hidden-wrap > img").length; //이미지 총 갯수
     $(".hidden-wrap > img").imagesLoaded()
     .done(function(){ //모든 이미지 로드가 완료되는 시점에 발생하는 이벤트
-        $(".preload-wrap").addClass("complete");
+        setTimeout(function(){
+            $(".preload-wrap").addClass("complete");
+            setTimeout(function(){
+                $(".preload-wrap").remove();
+            },700);
+            init();
+        },1000)
     })
     .progress(function(index){ //이미지 각각의 로드가 완료되는 시점에 한번씩 발생하는 이벤트
         var _pc = index.progressedCount;
