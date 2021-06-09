@@ -528,3 +528,60 @@ body {
     opacity: 0;
     z-index: -1;
 }
+
+
+@media screen and (max-width:1024px) {
+
+    #section0 .link-wrap .link-unit .btn {
+        font-size: 80px;
+    }
+
+    #section1 .link-wrap .link-unit .btn {
+        font-size: 50px;
+    }
+
+    #section2 .link-wrap {
+        position: absolute;
+        right: 100px;
+    }
+
+    #section2 .link-wrap .link-unit .btn {
+        font-size: 80px;
+        line-height: 50px;
+    }
+
+    #section3 .photo-wrap > ul .unit > img {
+        width: 560px;
+        height: 400px;
+    }
+
+    #section4 .input-wrap .input-inner .unit > input[type="text"] {
+        font-size: 15px;
+        width: 220px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    #section0 .link-wrap .link-unit .btn{
+        font-size: 50px;
+    }
+
+    #section2 .link-wrap {
+        right: 30px;
+        bottom: 10px;
+    }
+
+    #section2 .link-wrap .link-unit .btn {
+        font-size: 55px;
+        line-height: 50px;
+    }
+    
+    #section3 .photo-wrap > ul .unit > img {
+        width: 430px;
+        height: 320px;
+    }
+    #section4 .input-wrap .input-inner .unit > input[type="text"] {
+        font-size: 11px;
+        width: 150px;
+    }
+}
