@@ -1,0 +1,255 @@
+<style>
+	.hidden{width:100%; display:none}
+
+	#nav{z-index:0}
+
+	.home .wrap-center{width:730px; height:730px; position:absolute; top:50%; left:50%; margin:-365px 0 0 -365px;}
+	.home .wrap-center > .inner{width:100%; height:100%; position:relative; }
+
+	.home .wrap-circle{width:100%; height:100%; border-radius:100%; overflow:hidden; position:relative; background-color:#999; transition:transform .5s ease-out; transform:scale(0)}
+	.home .wrap-circle > ul,
+	.home .wrap-circle > ul > li{width:100%; height:100%; }
+	.home .wrap-circle > ul > li{position:absolute; left:100%; border-radius:100%; overflow:hidden;   }
+	.home .wrap-circle > ul > li.on{z-index:2; }
+	.home .wrap-circle > ul > li.next{animation:ani_circle_next 1s forwards cubic-bezier(0.68, -0.55, 0.265, 1.55);;}
+	.home .wrap-circle > ul > li.prev{animation:ani_circle_prev 1s forwards cubic-bezier(0.68, -0.55, 0.265, 1.55);;}
+	@keyframes ani_circle_next{
+		0%{left:100%; transform: rotateZ(90deg);}
+		100%{left:0; transform: rotateZ(0deg);}
+	}
+	@keyframes ani_circle_prev{
+		0%{left:-100%; transform: rotateZ(270deg);}
+		100%{left:0; transform: rotateZ(360deg);}
+	}
+	.home .wrap-circle > ul > li.current{z-index:3}
+
+	.home .wrap-circle > ul > li .photo{display:block; width:100%; height:100%; background:url(https://lh5.googleusercontent.com/proxy/_t19Z9sJGU9n6gitSP6IwyT44MrOUg3fp-lWgRiuxNj46TO92dT847gqoFdH6EqXh7kDJeR5CCu3Xak2y4Zf7Od27W7CbfBNfG-o) no-repeat center center; background-size:cover}
+	.home .wrap-circle > ul > li:nth-child(2) .photo{background-image:url(https://img.vogue.co.kr/vogue/2015/09/style_56027a4f536e3.jpg)}
+	.home .wrap-circle > ul > li:nth-child(3) .photo{background-image:url(https://lifeedu.skuniv.ac.kr/wp-content/uploads/245_293_146_%EC%84%9C%EA%B2%BD%EB%8C%80_%ED%8C%A8%EC%85%98%EB%94%94%EC%9E%90%EC%9D%B8_%EC%83%A4%EB%84%AC_%EB%B3%B5%EC%8B%9D.png)}
+
+	.home .wrap-txt{position:absolute; bottom:20px; right:0; z-index:10}
+	.home .wrap-txt > ul{}
+	.home .wrap-txt > ul > li{font-size:60px; position:relative; text-align:right; overflow:hidden; margin-top:-72px}
+	.home .wrap-txt > ul > li:nth-child(1){margin-top:0}
+		.home .wrap-txt > ul > li > span{ color:#000; position:relative; transition:top .5s ease-in-out; top:61px; font-weight:bold}
+	.home .wrap-txt > ul > li:after{content:'';position:absolute; top:0; left:0; width:0%; height:100%; background-color:#000; }
+	.home .wrap-txt > ul > li.on{}
+	.home .wrap-txt > ul > li.on > span{animation:txt_span .8s forwards ease-in-out; animation-delay:.5s; top:0; transition-delay:.5s}
+	.home .wrap-txt > ul > li.on:after{animation:txt_after .8s forwards ease-in-out; animation-delay:.5s}
+	@keyframes txt_span{
+		0%{opacity:0}
+		49%{opacity:0}
+		50%{opacity:1}
+		100%{opacity:1}
+	}
+	@keyframes txt_after{
+		0%{width:0; left:0}
+		50%{width:100%; left:0}
+		100%{width:0%; left:100%}
+	}
+	.home .wrap-btn{position:absolute; top:50%; width:100%; margin-top:-23px}
+	.home .wrap-btn > div{position:relative;width:110px; height:47px;}
+	.home .wrap-btn > div.l{float:left; margin-left:0; transition:margin-left .5s ease-out, opacity .5s ease-out; transition-delay:.5s; opacity:0}
+	.home .wrap-btn > div.r{float:right; margin-right:0; transition:margin-right .5s ease-out, opacity .5s ease-out; transition-delay:.5s; opacity:0}
+	.home .wrap-btn > div.l .txt{position: absolute;top: 14px;right: 20px;font-size: 16px;transform: rotate(270deg);}
+	.home .wrap-btn > div.r .txt{position: absolute;top: 14px;left: 20px;font-size: 16px;transform: rotate(90deg);}
+	.home .wrap-btn > div > a{position:absolute; top:0; left:0; width:100%; height:100%; display:block}
+
+	.home .wrap-btn .arr{position:absolute; height:1px; width:35px; background:#000; display:block; top:50%;}
+	.home .wrap-btn .arr:before{content:''; height:1px; width:15px; background:#000; display:block; transform: rotate(180deg); position:absolute; top:0; left:0; transition:all .2s ease-out}
+	.home .wrap-btn .arr:after{content:''; height:1px; width:15px; background:#000; display:block; transform: rotate(0deg); position:absolute; top:0; left:0; transition:all .2s ease-out}
+	.home .wrap-btn a:hover .arr:before{transform: rotate(135deg);top:-5px; left:-2px}
+	.home .wrap-btn a:hover .arr:after{transform: rotate(45deg);top:5px; left:-2px}
+	.home .wrap-btn .r a .arr{right:0}
+	.home .wrap-btn .r a .arr:before{transform: rotate(0deg); left:20px; }
+	.home .wrap-btn .r a .arr:after{transform: rotate(180deg); left:20px; }
+	.home .wrap-btn .r a:hover .arr:before{transform: rotate(45deg);left:22px;}
+	.home .wrap-btn .r a:hover .arr:after{transform: rotate(135deg);left:22px;}
+
+	.home .wrap-outline{}
+	.home .wrap-outline > span{display:block;height:730px; width:730px; border-radius:100%; border:1px solid #999; top:0; left:0; position:absolute; transition:transform .5s ease-out, opacity .5s ease-out; transform:scale(0.8); opacity:0}
+	.home .wrap-outline > span:nth-child(1){top:-20px; left:-30px; transition-delay:.1s}
+	.home .wrap-outline > span:nth-child(2){top:20px; left:20px; transition-delay:.2s}
+	.home .wrap-outline > span:nth-child(3){top:-40px; left:20px; transition-delay:.3s}
+	.home .wrap-outline > span:nth-child(4){top:20px; left:30px; transition-delay:.4s}
+	.home .wrap-outline > span:nth-child(5){top:-30px; left:-30px; transition-delay:.5s}
+	.home .wrap-outline > span:nth-child(6){top:22px; left:-20px; transition-delay:.6s}
+
+	.wrap-content.home.intro{}
+	.wrap-content.home.intro .wrap-outline > span{transform:scale(1); opacity:1}
+	.wrap-content.home.intro .wrap-btn > div.l{margin-left:-120px; opacity:1}
+	.wrap-content.home.intro .wrap-btn > div.r{margin-right:-120px; opacity:1}
+	.wrap-content.home.intro .wrap-circle{transform:scale(1)}
+
+	@media all and (max-width:1140px){
+		.home .wrap-center{width: 430px;height: 430px;margin: -215px 0 0 -215px;}
+		.home .wrap-txt > ul > li{font-size:30px;margin-top:-37px}
+		.home .wrap-outline > span{width:430px; height:430px;}
+		.wrap-content.home.intro .wrap-btn > div.l{margin-left: -90px;}
+		.wrap-content.home.intro .wrap-btn > div.r{margin-right:-90px}
+	}
+
+	@media all and (max-width:640px){
+		.home .wrap-center{width: 280px;height: 280px;margin: -140px 0 0 -140px;}
+		.home .wrap-txt > ul > li{font-size:20px;margin-top:-24px}
+		.home .wrap-outline > span{width:280px; height:280px;}
+		.wrap-content.home.intro .wrap-btn > div.l{margin-left: -31px;}
+		.wrap-content.home.intro .wrap-btn > div.r{margin-right:-31px}
+		.home .wrap-btn > div.r .txt,
+		.home .wrap-btn > div.l .txt{font-size:12px; top:19px}
+		.home .wrap-btn .arr{width:15px}
+		.home .wrap-btn > div{width:60px}
+		.home .wrap-btn .arr:before,
+		.home .wrap-btn .arr:after{width:10px}
+		.home .wrap-btn a:hover .arr:before{top:-3px; left:-2px}
+		.home .wrap-btn a:hover .arr:after{top:3px; left:-2px}
+		.home .wrap-btn .r a .arr:before,
+		.home .wrap-btn .r a .arr:after{left:6px; }
+		.home .wrap-btn .r a:hover .arr:before,
+		.home .wrap-btn .r a:hover .arr:after{left:8px}
+		.wrap-content.home.intro .wrap-outline > span{transform:scale(.9)}
+	}
+	
+</style>
+
+<script>
+	
+	$(function(){
+		sub.imgCompleteCount = 0
+		$(".hidden").on('load', function() {
+			sub.imgCompleteCount++;
+			if($(".hidden").length == sub.imgCompleteCount) {
+				main.loadCompleteFn()
+				sub.setSubFn()
+			}
+		})
+	})
+	
+	sub.currentNum = 0
+	sub.selected = 1000
+	sub.clicked = false
+	sub.setSubFn = function(){
+		$('.wrap-btn .r a').click(function(){
+			if(!sub.clicked){
+				sub.clicked = true
+				sub.currentNum++
+				if(sub.currentNum == 3) sub.currentNum = 0
+				sub.rollingFn()
+			}
+		})
+
+		$('.wrap-btn .l a').click(function(){
+			if(!sub.clicked){
+				sub.clicked = true
+				sub.currentNum--
+				if(sub.currentNum == -1) sub.currentNum = 2
+				sub.rollingFn(true)
+			}
+		})
+
+		setTimeout(function(){
+			sub.rollingFn()
+		},800)
+
+		sub._xArr = []
+		sub._yArr = []
+		sub._hArr = [1, .2, 1.2, 1.5, .5, .8]
+		$('.wrap-outline > span').each(function(idx){
+			sub._xArr.push(Number($(this).css("left").replace('px', '')))
+			sub._yArr.push(Number($(this).css("top").replace('px', '')))
+		})
+		window.addEventListener("mousemove",sub.moveFn)
+		
+		setTimeout(function(){
+			$('.wrap-content').addClass('intro');
+		},300)
+	};
+	sub.moveFn = function(e){
+		sub.mouseX = Math.max(-1000, Math.min(1000, $(window).width()/2 - e.pageX));
+		sub.mouseY = Math.max(-1000, Math.min(1000, $(window).height()/2 - e.pageY));
+		$('.wrap-outline > span').each(function(idx){
+			$(this).css({"left":sub._xArr[idx] + sub.mouseX * sub._hArr[idx]/20})
+			$(this).css({"top":sub._yArr[idx] + sub.mouseY * sub._hArr[idx]/20})
+		});
+		
+	}
+
+	sub.rollingFn = function(boo){
+		$('.wrap-txt > ul > li').eq(sub.selected).removeClass('on');
+		$('.wrap-txt > ul > li').eq(sub.currentNum).addClass('on');
+		$('.wrap-circle > ul > li').eq(sub.currentNum).addClass('on current');
+		if(boo) $('.wrap-circle > ul > li').eq(sub.currentNum).addClass('prev');
+		else $('.wrap-circle > ul > li').eq(sub.currentNum).addClass('next');
+		setTimeout(function(){
+			$('.wrap-circle > ul > li').eq(sub.selected).removeClass('on next prev');
+			$('.wrap-circle > ul > li').eq(sub.currentNum).removeClass('current');
+			sub.selected = sub.currentNum;
+		},1000)
+		setTimeout(function(){
+			sub.clicked = false
+		},1200)
+	}
+
+	sub.outroFn = function(){
+		window.removeEventListener("mousemove",sub.moveFn)
+		sub = null;
+	}
+
+</script>
+
+<img src="https://lh5.googleusercontent.com/proxy/_t19Z9sJGU9n6gitSP6IwyT44MrOUg3fp-lWgRiuxNj46TO92dT847gqoFdH6EqXh7kDJeR5CCu3Xak2y4Zf7Od27W7CbfBNfG-o" class="hidden" />
+<img src="https://img.vogue.co.kr/vogue/2015/09/style_56027a4f536e3.jpg" class="hidden" />
+<img src="https://lifeedu.skuniv.ac.kr/wp-content/uploads/245_293_146_%EC%84%9C%EA%B2%BD%EB%8C%80_%ED%8C%A8%EC%85%98%EB%94%94%EC%9E%90%EC%9D%B8_%EC%83%A4%EB%84%AC_%EB%B3%B5%EC%8B%9D.png" class="hidden" />
+
+<div class="wrap-content home">
+	<div class="wrap-center">
+		<div class="inner">
+			
+			<div class="wrap-outline">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="wrap-btn">
+
+				<div class="l">
+					<span class="txt">PREV</span>
+					<a href="javascript:">
+						<span class="arr"></span>
+					</a>
+				</div>
+
+				<div class="r">
+					<span class="txt">NEXT</span>
+					<a href="javascript:">
+						<span class="arr"></span>
+					</a>
+					
+				</div>
+			</div>
+
+			<div class="wrap-circle">
+				<ul>
+					<li><span class="photo p1"></span></li>
+					<li><span class="photo p2"></span></li>
+					<li><span class="photo p3"></span></li>
+				</ul>
+			</div>
+
+			<div class="wrap-txt">
+				<ul>
+					<li><span>Web Publishing</span></li>
+					<li><span>Javascript & Jquery</span></li>
+					<li><span>Web Design & UI/UX</span></li>
+				</ul>
+			</div>
+
+			
+		</div>
+	</div>
+</div>
+

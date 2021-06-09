@@ -500,7 +500,7 @@ body {
 .preload-wrap.complete::after {
     transform: translateY(100%);
 }
-.preload-wrap .count.complete {
+.preload-wrap.complete .count {
     opacity: 0;
 }
 .preload-wrap .count {

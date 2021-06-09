@@ -1,0 +1,126 @@
+<style>
+	.hidden{display:none}
+
+	.inner{position:relative;}
+	.wrap-content.profile > .inner{max-width:1600px; margin:0 auto; height:100vh}
+
+	.wrap-content.profile .wrap-txt{font-size:70px; line-height:100%; position:absolute; left:70px; top:70px}
+	.wrap-content.profile .wrap-txt > p{}
+	.wrap-content.profile .wrap-txt > p > span{position:relative;}
+	.wrap-content.profile .wrap-txt > p > span:after{content:''; position:absolute; display:block; left:0; top:0; width:0%; height:100%; background-color:#000}
+	.wrap-content.profile .wrap-txt > p > span > strong{opacity:0}
+
+	.wrap-content.profile .wrap-img{position:absolute; bottom:70px; right:0}
+	.wrap-content.profile .wrap-img .line{display:block; width:0; height:1px; background-color:#999; position:absolute; right:0}
+	.wrap-content.profile .wrap-img .line:before{content:""; display:block; width:1px; height:0; background-color:#999; position:absolute; left:0; top:0; z-index:-1}
+	.wrap-content.profile .wrap-img .line:after{content:""; display:block; width:0; height:1px; background-color:#999; position:absolute; left:0; top:400px; z-index:-1}
+	.wrap-content.profile .wrap-img .img{padding-top:30px; text-align:right; overflow-x:hidden; width:0}
+	.wrap-content.profile .wrap-img #canvas{width:800px; height:539px}
+
+	.wrap-content.profile.intro .wrap-txt > p > span > strong{animation:txt_unit .8s forwards ease-in-out;}
+	.wrap-content.profile.intro .wrap-txt > p:nth-child(1) > span > strong{animation-delay:.1s}
+	.wrap-content.profile.intro .wrap-txt > p:nth-child(2) > span > strong{animation-delay:.3s}
+	.wrap-content.profile.intro .wrap-txt > p:nth-child(3) > span > strong{animation-delay:.5s}
+	.wrap-content.profile.intro .wrap-txt > p > span:after{animation:txt_after .8s forwards ease-in-out; }
+	.wrap-content.profile.intro .wrap-txt > p:nth-child(1) > span:after{animation-delay:.1s}
+	.wrap-content.profile.intro .wrap-txt > p:nth-child(2) > span:after{animation-delay:.3s}
+	.wrap-content.profile.intro .wrap-txt > p:nth-child(3) > span:after{animation-delay:.5s}
+	@keyframes txt_after{
+		0%{width:0; left:0}
+		50%{width:100%; left:0}
+		100%{width:0%; left:100%}
+	}
+	@keyframes txt_unit{
+		0%{opacity:0}
+		49%{opacity:0}
+		50%{opacity:1}
+		100%{opacity:1}
+	}
+
+	.wrap-content.profile.intro .wrap-img .line{transition:width .5s .5s; width:900px}
+	.wrap-content.profile.intro .wrap-img .line:before{transition:height .5s 1s; height:400px}
+	.wrap-content.profile.intro .wrap-img .line:after{transition:width .5s 1.5s; width:900px}
+
+	.wrap-content.profile.intro .wrap-img .img{transition:width .7s 2s; width:800px}
+
+	.plane {width: 80%; height: 1vh; position: absolute; top: 0; margin: 0 auto;}
+	.plane img {display: none;}
+	@media all and (max-width:1400px){
+		.wrap-content.profile.intro .wrap-img .img{width:530px}
+		.wrap-content.profile.intro .wrap-img .line{width:560px}
+	}
+	@media all and (max-width:960px){
+		.wrap-content.profile.intro .wrap-img .img{width:500px}
+		.wrap-content.profile.intro .wrap-img .line{width:540px}
+		.wrap-content.profile .wrap-txt{top:80px; font-size:50px}
+	}
+
+	@media all and (max-width:640px){
+		.wrap-content.profile .wrap-txt{font-size: 35px; left:50px; top:100px}
+		.wrap-content.profile.intro .wrap-img .img{width: 250px;}
+		.wrap-content.profile.intro .wrap-img .img img{height:250px}
+		.wrap-content.profile .wrap-img{/*bottom:auto; margin-top: 30px;*/}
+		.wrap-content.profile .wrap-img .line{right:-250px}
+		.wrap-content.profile .wrap-img .line:after{top:250px}
+		.wrap-content.profile.intro .wrap-img .line:before{height:250px}
+	}
+}
+
+</style>
+
+<script>
+	sub.imgCompleteCount = 0
+	$(function(){
+		$(".hidden").on('load', function() {
+			sub.imgCompleteCount++;
+			if($(".hidden").length == sub.imgCompleteCount) {
+				main.loadCompleteFn()
+				sub.setSubFn()
+			}
+		})
+	})
+
+	sub.setSubFn = function(){
+		setTimeout(function(){
+			$('.wrap-content').addClass('intro');
+		},300)
+	}
+
+	sub.outroFn = function(){
+		sub = null;
+	}
+
+
+</script>
+
+
+
+        
+
+<img src="img/img_profile.jpg" class="hidden" />
+
+<div class="wrap-content profile">
+	<div class="inner">
+
+		<div class="wrap-txt">
+			<p><span><strong>serkee5559</strong></span></p>
+			<p><span><strong>Web Publishing</strong></span></p>
+			<p><span><strong>Seoul, Korea</strong></span></p>
+		</div>
+
+		<div class="wrap-img">
+			<div class="inner">
+				<span class="line"></span>
+				<div class="img">
+					<img src="img/img_profile.jpg">
+					<!--<canvas id="canvas"></canvas>-->
+					<!--<div id="canvas"></div>
+					<div class="plane">
+            <img src="img/img_profile.jpg" crossorigin="anonymous" />
+        	</div>-->
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

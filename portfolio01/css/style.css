@@ -1,0 +1,47 @@
+/* 
+상업적 목적 사용을 금지합니다.
+강의 자료용이니 문의사항있으시면 연락주세요.
+email : serkee@naver.com
+*/
+
+body{background-color:#ededed; font-family: 'Roboto', sans-serif; overflow-x:hidden }
+i{font-style: normal}
+
+#nav{position:fixed; top:0; width:80px; bottom:0; overflow: hidden; z-index: 10; transition: width ease-out .3s}
+#nav.on{width:200px;z-index: 100}
+#nav .btn-nav{display:block; width:50px; height: 50px; position: relative; top:50%; left:30px; margin-top:-29px; padding-top:15px; box-sizing: border-box}
+#nav .btn-nav:before,
+#nav .btn-nav:after{content: ''; display: block; height:3px; width:10px; background-color:#000; margin:0 auto; transition: width ease-in-out .3s}
+#nav .btn-nav > span{display: block; height:3px; width:10px; background-color:#000; margin:8px auto; transition: width ease-in-out .3s}
+#nav .btn-nav:hover:before,
+#nav .btn-nav:hover > span,
+#nav .btn-nav:hover:after{width:30px;}
+#nav .btn-nav:before{transition-delay: 0s}
+#nav .btn-nav > span{transition-delay: 0.1s}
+#nav .btn-nav:after{transition-delay: 0.2s}
+
+#nav .menu{position:absolute; top:0; width:200px; bottom:0; background-color:#fff; left:-200px; transition: left ease-out .3s }
+#nav.on .menu{left:0; }
+#nav .menu > ul{ position: absolute; top:50%; margin-top:-92px}
+#nav .menu > ul > li{padding-left:20px; margin:10px 0}
+#nav .menu > ul > li > a{font-size:22px; position: relative;}
+#nav .menu > ul > li > a:before{content:''; display: block; height:100%; width: 0; background-color:rgba(0,255,203,.3); position: absolute; z-index: 0; top: 10px; left:20px; transition: width .2s}
+#nav .menu > ul > li > a:hover:before{width:100%;}
+
+#wrap-loading{position: fixed; top:0; bottom:0; left:0; right:100%;  background:#000; overflow: hidden; transition: all ease-in-out .5s; z-index: 100}
+#wrap-loading.on{right: 0;}
+#wrap-loading.on.finish{left:100%;}
+#wrap-loading > span{display: block; width:30px; height: 30px; border-radius: 100%; box-sizing: border-box; border:4px solid #999; position: absolute; top:50%; left:50%; margin: -15px 0 0 -15px; animation:ani-loading .5s linear infinite}
+#wrap-loading > span:after{content: ''; display: block; width:10px; height: 10px; background:#000; margin: -5px 0 0 6px}
+@keyframes ani-loading{
+	100%{	transform: rotate( 360deg );}
+}
+
+
+.txt-temp{position: absolute; top:50%; left:0; width: 100%; text-align: center; margin-top:-35px; font-size:80px}
+
+
+@media all and (max-width:840px){
+	
+	#nav .btn-nav{top:20px; margin-top:0}
+}

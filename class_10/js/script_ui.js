@@ -14,7 +14,6 @@ $(function(){
     .progress(function(index){ //이미지 각각의 로드가 완료되는 시점에 한번씩 발생하는 이벤트
         var _pc = index.progressedCount;
         var _per = Math.floor(_pc / _tc * 100);
-        // console.log(_per);
         $(".preload-wrap .count").text(_per);
         $(".preload-wrap .count").css("width", _per + "%")
     });

@@ -1,0 +1,132 @@
+<style>
+	.wrap-content.contact{height:100vh;}
+	.wrap-content.contact > .inner{width:600px; margin:0 auto}
+
+	.wrap-content.contact .wrap-email{padding-top:0px}
+	.wrap-content.contact .wrap-email .unit{position:relative; padding-top:30px}
+	.wrap-content.contact .wrap-email .unit > label{font-size:30px; font-weight:bold; display:inline-block; margin:0 0 0 -10px; position:relative; z-index:2}
+	.wrap-content.contact .wrap-email .unit > label:after{content:'';position:absolute; top:0; left:0; height:100%; width:0; background-color:#000}
+	.wrap-content.contact .wrap-email .unit > label > i{opacity:0}
+	.wrap-content.contact .wrap-email .unit > p{background-color:#fff; padding:5px 10px 5px 100px ; margin-top:-15px; box-sizing:border-box; overflow:hidden; width:0; transition:all .5s ease-in-out; opacity:0 }
+	.wrap-content.contact .wrap-email .unit > p > input{width:100%; border:none; height:30px}
+	.wrap-content.contact .wrap-email .unit > p > textarea{width:100%; border:none; height:150px}
+	.wrap-content.contact .map{position:absolute; bottom:0; height:0; left:0; width:100%; background-color:#999; transition:height .3s ease-in-out; }
+	.wrap-content.contact .wrap-btn{text-align:center; margin-top:30px; transition:all .5s; opacity:0}
+	.wrap-content.contact .wrap-btn > input[type=submit]{border:none; background:none; border-bottom:3px solid #000; font-size:20px; font-weight:bold; }
+	.wrap-content.contact .wrap-btn > input[type=submit]:hover{color:rgba(0,255,203, .3);border-bottom-color:rgba(0,255,203, .3)}
+
+	.wrap-content.contact.intro .wrap-email .unit > label:after{animation:txt_after .4s forwards ease-in-out;}
+	.wrap-content.contact.intro .wrap-email .unit:nth-child(2) > label:after{animation-delay:.3s}
+	.wrap-content.contact.intro .wrap-email .unit:nth-child(3) > label:after{animation-delay:.6s}
+	@keyframes txt_after{
+		0%{width:0; left:0}
+		50%{width:100%; left:0}
+		100%{width:0%; left:100%}
+	}
+	.wrap-content.contact.intro .wrap-email .unit > label > i{animation:txt_unit .4s forwards ease-in-out;}
+	.wrap-content.contact.intro .wrap-email .unit:nth-child(2) > label > i{animation-delay:.3s}
+	.wrap-content.contact.intro .wrap-email .unit:nth-child(3) > label > i{animation-delay:.6s}
+	@keyframes txt_unit{
+		0%{opacity:0}
+		49%{opacity:0}
+		50%{opacity:1}
+		100%{opacity:1}
+	}
+
+	.wrap-content.contact.intro .wrap-email .unit:nth-child(1) > p{transition-delay:.1s; width:100%; opacity:1}
+	.wrap-content.contact.intro .wrap-email .unit:nth-child(2) > p{transition-delay:.4s; width:100%; opacity:1}
+	.wrap-content.contact.intro .wrap-email .unit:nth-child(3) > p{transition-delay:.7s; width:100%; opacity:1}
+	.wrap-content.contact.intro .wrap-btn{opacity:1; margin-top:20px; transition-delay:1s}
+	.wrap-content.contact.intro .map{height: calc(100% - 510px); transition-delay:1.3s}
+
+	@media all and (max-width:830px){
+		.wrap-content.contact > .inner{width:470px}
+		.wrap-content.contact .wrap-email {padding-top: 70px;}
+		.wrap-content.contact .wrap-email .unit > label{font-size:20px}
+		.wrap-content.contact .wrap-email .unit > p{padding: 0px 10px 0px 70px;}
+		.wrap-content.contact .wrap-email .unit{padding-top:20px}
+		.wrap-content.contact .wrap-email .unit > p > input{height:25px}
+		.wrap-content.contact .wrap-email .unit > p > textarea{height:70px}
+		.wrap-content.contact .wrap-btn > input[type=submit]{font-size:15px; border-bottom-width:2px}
+		.wrap-content.contact.intro .map{height: calc(100% - 360px);}
+		
+	}
+	@media all and (max-width:490px){
+		.wrap-content.contact > .inner{width:auto; padding: 0 20px;}
+	}
+
+</style>
+
+<script>
+	sub.setSubFn = function(){
+		setTimeout(function(){
+			$('.wrap-content').addClass('intro');
+		},300)
+	};
+	sub.sendMail = function(){
+		$('#name, #email, #content').val("");
+		alert("메일 완료");
+	}
+	sub.outroFn = function(){
+		sub = null;
+	}
+</script>
+
+<div class="wrap-content contact">
+	<div class="inner">
+		<div class="wrap-email">
+			<form action="javascript:sub.sendMail();" name="pmForm" id="pmForm" method="post">
+			<div class="unit">
+				<label for="name"><i>Name</i></label>
+				<p><input id="name"></p>
+			</div>
+			<div class="unit">
+				<label for="email"><i>Email</i></label>
+				<p><input id="email"></p>
+			</div>
+			<div class="unit">
+				<label for="content"><i>Content</i></label>
+				<p><textarea id="content"></textarea>
+			</div>
+			<div class="wrap-btn">
+				<input name="pmSubmit" type="submit" value="Send" />
+			</div>
+			</form>
+		</div>
+	</div>
+	<div class="map" id="map">
+
+	</div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg8UDmaFnsfi7MpO3mxEVa9tAI0_chpOE&callback=initMap" ></script>
+<script>
+	var map = null;
+	function initMap() {
+		/*map = new google.maps.Map(document.getElementById('map'), {
+			center: {lat: 37.515743, lng: 127.017083},
+			zoom: 16
+		});*/
+
+		var myLatlng = new google.maps.LatLng(37.515743,127.017083);
+		var mapOptions = {
+			zoom: 16,
+			center: myLatlng
+		}
+		map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+		var marker = new google.maps.Marker({
+				position: myLatlng,
+				title:"Hello World!"
+		});
+		google.maps.event.addListenerOnce(map, 'idle', function(){
+				// do something only the first time the map is loaded
+				setTimeout(function(){
+					main.loadCompleteFn()
+					sub.setSubFn()
+				},1000)
+		});
+
+		// To add the marker to the map, call setMap();
+		marker.setMap(map);
+	}
+</script>
