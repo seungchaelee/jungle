@@ -537,7 +537,7 @@ body {
     }
 
     #section1 .link-wrap .link-unit .btn {
-        font-size: 50px;
+        font-size: 65px;
     }
 
     #section2 .link-wrap {
@@ -561,9 +561,23 @@ body {
     }
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:680px) {
     #section0 .link-wrap .link-unit .btn{
-        font-size: 50px;
+        font-size: 65px;
+    }
+
+    #section1 .link-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #section1 .link-wrap .link-unit .btn {
+        font-size: 105px;
+        height: 105px;
+        line-height: 105px;
+        display: block;
     }
 
     #section2 .link-wrap {
