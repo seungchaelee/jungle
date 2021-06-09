@@ -10,7 +10,6 @@ $(function(){
             },700);
             init();
         },1000)
-        
     })
     .progress(function(index){ //이미지 각각의 로드가 완료되는 시점에 한번씩 발생하는 이벤트
         var _pc = index.progressedCount;
@@ -131,7 +130,6 @@ function init(){
         var _b = Math.floor(Math.random()*256);
         //애니메이션 타입을 랜덤으로 정할 값 구험(0~2)
         var _rn = Math.floor(Math.random()*3);
-        
         // append : 추가될대상.append(추가객체)
         // appendTo : 추가객체.appendTo(추가될대상).추가이벤트1.추가이벤트2 ...
         // $("#section4 .txt-wrap .area").append("<span class='ani-"+_rn+"' style='color:rgb("+_r+", "+_g+", "+_b+")'>"+_t+"</span>");
@@ -140,7 +138,6 @@ function init(){
         .on("animationend",function(){//css에서 만든 애니메이션이 끝나는 시점에 이벤트 발생
             $(this).remove(); //자신을 삭제
         })
-        
     })
 
 }

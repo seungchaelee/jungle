@@ -127,7 +127,7 @@ body {
     animation-name: ani-bg1-r ;
 }
 @keyframes ani-bg1-r {
-    0% {background-position: 0 0;}   
+    0% {background-position: 0 0;}
     100% {background-position: -690px 0;} /* 사이즈 맞추기 */
 }
 
@@ -146,7 +146,7 @@ body {
     animation-name: ani-bg1-r ;
 }
 @keyframes ani-bg2-r {
-    0% {background-position: 0 0;}   
+    0% {background-position: 0 0;}
     100% {background-position: -634px 0;} /* 사이즈 맞추기 */
 }
 
@@ -165,7 +165,7 @@ body {
     animation-name: ani-bg1-r ;
 }
 @keyframes ani-bg3-r {
-    0% {background-position: 0 0;}   
+    0% {background-position: 0 0;}
     100% {background-position: -870px 0;} /* 사이즈 맞추기 */
 }
 
@@ -457,10 +457,10 @@ body {
 
 /* 딜레이 설정 */
 .section .intro-obj.delay-1 {
-    transition-delay: 0.3s !important; 
+    transition-delay: 0.3s !important;
 }
 .section .intro-obj.delay-2 {
-    transition-delay: 0.6s !important; 
+    transition-delay: 0.6s !important;
 }
 .section .intro-obj.delay-3 {
     transition-delay: 0.9s !important;
