@@ -1,0 +1,29 @@
+#fp-nav {}
+#fp-nav > ul {}
+#fp-nav > ul > li {
+    text-align: right;
+}
+#fp-nav > ul > li + li {
+    margin-top: 1px;
+}
+#fp-nav > ul > li > a {
+    display: block;
+}
+#fp-nav > ul > li > a > span {
+    display: inline-block;
+    background-color: #09131b;
+    color: #fff;
+    padding: 5px 10px 5px 20px;
+    font-size: 13px;
+    transform: translateX(calc(100% - 20px));
+    transition: transform 0.5s;
+}
+#fp-nav > ul > li.active {}
+#fp-nav > ul > li.active > a > span {
+    transform: translateX(0);
+}
+
+body {
+    background-color: #d5dee5;
+    font-family: 'Roboto', sans-serif;
+}
