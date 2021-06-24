@@ -134,7 +134,5 @@ function init(){
         .on("animationend",function(){ //css에서 만든 에니매이션이 끝나는 시점에 이벤트 발생
             $(this).remove(); //자신을 삭제
         })
-            
     })
-    
 }
