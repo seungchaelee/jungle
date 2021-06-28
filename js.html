@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>javascript</title>
+    <script>
+        function aaa() {
+            document.getElementById("qqq").innerText = "feel so high"
+        };
+        function bbb() {
+            const number = Number(document.getElementById("zzz").innerText) //0
+            document.getElementById("zzz").innerText = number + 1
+        }
+
+        function rrr() {
+            const number = Number(document.getElementById("hhh").innerText) //0
+            document.getElementById("hhh").innerText = String(Math.floor(Math.random() * 1000000)).padStart(6, "0")
+        }
+
+        function ccc() {
+            document.getElementById("xxx").setAttribute("disabled", true)
+        }
+
+        function ddd() {
+            document.getElementById("fff").style = "color: pink"
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="qqq">hi</div>
+    <button onclick="aaa()">click!</button>
+
+    <div id="zzz">0</div>
+    <button onclick="bbb()">up</button>
+
+    <div id="hhh">000000</div>
+    <button onclick="rrr()">random</button>
+
+    <br><br>
+    <button id="xxx" onclick="ccc()">비활성화 시키기</button>
+    <br><br>
+    <button id="fff" onclick="ddd()">change color</button>
+</body>
+
+</html>
