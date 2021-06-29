@@ -18,7 +18,7 @@ class_8 : 크론코딩 <br>
 
 class_9 : 포스터 <br>
 
-class_10 :fullpage, mouse(over or out), animation, slick, mouse point, text animation <br> /iscroll/ <br> /istope/ <br>
+class_10 :fullpage, mouse(over or out), animation, slick, mouse point, text animation <br>
 
 번 외 : 구구단 <br>
 
