@@ -20,6 +20,8 @@ class_9 : 포스터 <br>
 
 class_10 :fullpage, mouse(over or out), animation, slick, mouse point, text animation <br>
 
+class_11 : hex-color random code, <br>
+
 번 외 : 구구단 <br>
 
 감사합니다.
