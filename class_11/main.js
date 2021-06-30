@@ -16,5 +16,6 @@ button.addEventListener('click', () => {
     //Show On Screen
     value.textContent = hex;
     body.style.background = hex;
+    body.style.color = hex;
 
 });
