@@ -108,7 +108,7 @@ function init() {
     $("#section3 .txt-wrap > ul > li").eq(current).addClass("on"); //해당 index에 on클래스 추가
   });
 
-  //portfolio cursor 효과 
+  //portfolio cursor 효과
   document.addEventListener("mousemove", function (event) {
     var pw = $(".photo-wrap").position().top; //커서의 부모인 photo-wrap의 상단 공간값 구함(공간값이 커서와 마우스 포인터의 차이를 없앰)
     var mx = event.pageX - 15; //마우스 X좌표 값
