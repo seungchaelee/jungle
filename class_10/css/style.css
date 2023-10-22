@@ -67,7 +67,7 @@ body {
 #section0 .link-wrap .link-unit {}
 #section0 .link-wrap .link-unit .btn {
     color: #fff;
-    font-size: 130px;
+    font-size: 100px;
     font-weight: bold;
     opacity: 0.4;
     height: 130px;
@@ -533,7 +533,7 @@ body {
 @media screen and (max-width:1024px) {
 
     #section0 .link-wrap .link-unit .btn {
-        font-size: 80px;
+        font-size: 55px;
     }
 
     #section1 .link-wrap .link-unit .btn {
@@ -546,7 +546,7 @@ body {
     }
 
     #section2 .link-wrap .link-unit .btn {
-        font-size: 80px;
+        font-size: 75px;
         line-height: 50px;
     }
 

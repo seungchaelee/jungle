@@ -69,7 +69,7 @@ function init() {
   });
 
   ////skill
-  var _pos = [99, 85, 80, 95]; //좌표값
+  var _pos = [85, 75, 85, 80]; //좌표값
   var setId; //setInterval을 담는 변수
   $("#section2 .link-wrap .link-unit .btn").mouseover(function () {
     var _index = $(this).parent().index();
